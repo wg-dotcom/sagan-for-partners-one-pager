@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sagan Partner Referral — One Pager</title>
+  <link rel="icon" type="image/png" href="https://saganrecruitment.com/wp-content/uploads/2025/10/Sagan-Favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --teal:      #093a3e;
+      --teal-deep: #051f22;
+      --cream:     #f3f2ec;
+      --cream-hi:  #fbfaf3;
+      --gold:      #a67714;
+      --gold-bright: #c8941e;
+      --gold-hi:   #e8b32f;
+      --ink:       #0a0e0f;
+      --paper:     #ebe9df;
+      --rule:      rgba(10,14,15,0.25);
+      --rule-soft: rgba(10,14,15,0.14);
+      --display: 'Fraunces', 'Times New Roman', serif;
+      --editorial: 'Instrument Serif', 'Times New Roman', serif;
+      --mono: 'JetBrains Mono', 'Menlo', monospace;
+      --body: 'Inter', system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      font-family: var(--body);
+      font-size: 15px;
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      font-variant-numeric: tabular-nums;
+      overflow-x: hidden;
+    }
+
+    .page {
+      min-height: 100vh;
+      padding: 28px 44px 28px;
+      display: grid;
+      grid-template-rows: auto auto auto auto auto;
+      gap: 26px;
+      position: relative;
+    }
+
+    /* ── TOP RAIL ── */
+    .top-rail {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 18px;
+      border-bottom: 1.5px solid var(--ink);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .brand img { height: 24px; }
+    .brand .sep { width: 1px; height: 18px; background: rgba(10,14,15,0.25); }
+    .brand .product {
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: 17px;
+      letter-spacing: -0.005em;
+    }
+    .brand .product em {
+      font-family: var(--editorial);
+      font-style: italic;
+      font-weight: 400;
+      color: var(--teal);
+    }
+    .top-meta {
+      display: flex;
+      gap: 16px;
+      align-items: baseline;
+      color: var(--ink);
+    }
+    .top-meta .pulse {
+      width: 10px; height: 10px; border-radius: 50%;
+      background: var(--gold);
+      animation: pulse 2.4s ease-in-out infinite;
+      align-self: center;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
+    }
+    .top-meta .pre {
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: 22px;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      line-height: 1;
+    }
+    .top-meta .accent {
+      font-family: var(--editorial);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 28px;
+      letter-spacing: -0.015em;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 56px;
+      align-items: stretch;
+      padding: 12px 0 6px;
+    }
+    .h-left { display: flex; flex-direction: column; justify-content: space-between; gap: 28px; }
+    .headline {
+      font-family: var(--display);
+      font-weight: 300;
+      font-size: clamp(48px, 6.8vw, 110px);
+      line-height: 0.94;
+      letter-spacing: -0.035em;
+      color: var(--ink);
+    }
+    .headline em {
+      font-family: var(--editorial);
+      font-style: italic;
+      font-weight: 400;
+      color: var(--teal);
+    }
+    .headline .ul {
+      text-decoration: underline;
+      text-decoration-thickness: 4px;
+      text-decoration-color: var(--gold);
+      text-underline-offset: 10px;
+    }
+    .headline .heavy { font-weight: 700; }
+
+    .h-left .lede {
+      max-width: 580px;
+      font-family: var(--editorial);
+      font-style: italic;
+      font-size: clamp(18px, 1.5vw, 22px);
+      line-height: 1.4;
+      color: rgba(10,14,15,0.92);
+    }
+    .h-left .lede strong {
+      font-family: var(--display);
+      font-style: normal;
+      font-weight: 500;
+      color: var(--teal);
+    }
+
+    /* RIGHT: Anchor — partner earning */
+    .h-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+      background: var(--teal-deep);
+      color: var(--cream);
+      padding: 28px 32px 30px;
+      position: relative;
+      overflow: hidden;
+    }
+    .h-right::before {
+      content: '';
+      position: absolute;
+      top: -20%; right: -20%;
+      width: 320px; height: 320px;
+      background: radial-gradient(circle, rgba(232,179,47,0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .h-right .label {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold-hi);
+      position: relative;
+      z-index: 2;
+    }
+    .h-right .stat-block {
+      position: relative;
+      z-index: 2;
+    }
+    .h-right .stat-block .big-stat {
+      font-family: var(--display);
+      font-weight: 300;
+      font-size: 72px;
+      line-height: 0.85;
+      letter-spacing: -0.045em;
+      color: var(--cream);
+    }
+    .h-right .stat-block .big-stat .currency {
+      font-family: var(--editorial);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 0.42em;
+      color: var(--gold-hi);
+      vertical-align: 0.6em;
+      margin-right: 2px;
+    }
+    .h-right .stat-block .big-stat .or {
+      font-family: var(--editorial);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 0.4em;
+      color: var(--gold-hi);
+      margin: 0 8px;
+      vertical-align: 0.15em;
+    }
+    .h-right .stat-block .per {
+      display: block;
+      font-family: var(--editorial);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 15px;
+      color: var(--gold-hi);
+      letter-spacing: 0;
+      margin-top: 8px;
+    }
+    .h-right .stat-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(243,242,236,0.32);
+      position: relative;
+      z-index: 2;
+    }
+    .h-right .stat-row .item .k {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: rgba(243,242,236,0.85);
+      display: block;
+      margin-bottom: 8px;
+    }
+    .h-right .stat-row .item .v {
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: 26px;
+      letter-spacing: -0.018em;
+      color: var(--cream);
+      line-height: 1.05;
+    }
+    .h-right .stat-row .item .v em {
+      font-family: var(--editorial);
+      font-style: italic;
+      font-weight: 400;
+      color: var(--gold-hi);
+    }
+
+    /* ── INFO GRID (3 columns) ── */
+    .info {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1.2fr;
+      gap: 0;
+      border-top: 1.5px solid var(--ink);
+      padding-top: 22px;
+    }
+    .col {
+      padding: 0 26px;
+      border-left: 1px solid var(--rule);
+    }
+    .col:first-child { padding-left: 0; border-left: none; }
+    .col:last-child { padding-right: 0; }
+    .col-label {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .col-label::before {
+      content: '';
+      width: 18px;
+      height: 1px;
+      background: var(--teal);
+    }
+
+    /* COL 1: The Offer */
+    .offer-tiers {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .tier {
+      padding: 14px 0;
+      border-bottom: 1px dashed var(--rule-soft);
+    }
+    .tier:last-child { border-bottom: none; }
+    .tier .tier-name {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+    .tier .tier-pay {
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: 32px;
+      letter-spacing: -0.025em;
+      color: var(--teal);
+      line-height: 1.05;
+      margin-bottom: 4px;
+    }
+    .tier .tier-pay em {
+      font-family: var(--editorial);
+      font-style: italic;
+      color: var(--gold);
+      font-weight: 400;
+      font-size: 0.7em;
+    }
+    .tier .tier-detail {
+      font-size: 13px;
+      color: rgba(10,14,15,0.78);
+      line-height: 1.45;
+    }
+
+    /* COL 2: The math */
+    .math-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .math-table th {
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: var(--teal);
+      text-align: left;
+      font-weight: 500;
+      padding: 0 8px 8px 0;
+      border-bottom: 1px solid var(--ink);
+    }
+    .math-table th.right { text-align: right; }
+    .math-table td {
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: 14px;
+      color: var(--ink);
+      padding: 10px 8px 10px 0;
+      border-bottom: 1px solid var(--rule-soft);
+      letter-spacing: -0.005em;
+    }
+    .math-table td.scenario {
+      font-family: var(--body);
+      font-weight: 400;
+      font-size: 13px;
+      color: rgba(10,14,15,0.78);
+      line-height: 1.35;
+    }
+    .math-table td.amount {
+      text-align: right;
+      font-family: var(--display);
+      font-weight: 600;
+      color: var(--teal);
+      white-space: nowrap;
+    }
+    .math-table td.amount em {
+      font-family: var(--editorial);
+      font-style: italic;
+      color: var(--gold);
+      font-weight: 400;
+    }
+    .math-table tr.highlight td {
+      background: rgba(200,148,30,0.08);
+      font-weight: 600;
+    }
+    .math-table tr.highlight td.amount {
+      color: var(--gold);
+    }
+    .math-foot {
+      margin-top: 12px;
+      font-family: var(--editorial);
+      font-style: italic;
+      font-size: 13px;
+      color: rgba(10,14,15,0.7);
+      line-height: 1.45;
+    }
+    .math-foot strong {
+      font-family: var(--display);
+      font-style: normal;
+      font-weight: 500;
+      color: var(--teal);
+    }
+
+    /* COL 3: How it works */
+    .steps-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .step {
+      display: grid;
+      grid-template-columns: 36px 1fr;
+      gap: 14px;
+      align-items: start;
+    }
+    .step-num {
+      font-family: var(--display);
+      font-weight: 300;
+      font-size: 32px;
+      line-height: 1;
+      color: var(--gold);
+      letter-spacing: -0.03em;
+    }
+    .step-content .step-title {
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--ink);
+      letter-spacing: -0.012em;
+      margin-bottom: 4px;
+    }
+    .step-content .step-title em {
+      font-family: var(--editorial);
+      font-style: italic;
+      font-weight: 400;
+      color: var(--teal);
+    }
+    .step-content .step-desc {
+      font-size: 13px;
+      line-height: 1.5;
+      color: rgba(10,14,15,0.78);
+    }
+
+    .steps-foot {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid var(--rule-soft);
+      font-family: var(--editorial);
+      font-style: italic;
+      font-size: 13px;
+      line-height: 1.5;
+      color: rgba(10,14,15,0.72);
+    }
+    .steps-foot strong {
+      font-family: var(--display);
+      font-style: normal;
+      font-weight: 500;
+      color: var(--teal);
+    }
+
+    /* ── PROOF STRIP ── */
+    .proof-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      padding: 24px 0;
+      border-top: 1.5px solid var(--ink);
+      border-bottom: 1.5px solid var(--ink);
+    }
+    .proof-cell {
+      padding: 0 18px;
+      border-left: 1px solid var(--rule);
+    }
+    .proof-cell:first-child { border-left: none; padding-left: 0; }
+    .proof-cell .proof-num {
+      font-family: var(--display);
+      font-weight: 400;
+      font-size: 34px;
+      line-height: 1;
+      letter-spacing: -0.025em;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+    .proof-cell .proof-num em {
+      font-family: var(--editorial);
+      font-style: italic;
+      font-weight: 400;
+      color: var(--gold);
+    }
+    .proof-cell .proof-label {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      color: rgba(10,14,15,0.7);
+      line-height: 1.4;
+    }
+
+    /* ── BOTTOM RAIL ── */
+    .bottom-rail {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 0.7fr;
+      gap: 36px;
+      align-items: center;
+      padding-top: 22px;
+      border-top: 1.5px solid var(--ink);
+    }
+    .bottom-rail .left {
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: 22px;
+      letter-spacing: -0.015em;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .bottom-rail .left .accent {
+      display: block;
+      margin-top: 8px;
+      font-family: var(--editorial);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 26px;
+      letter-spacing: -0.018em;
+      color: var(--gold);
+      line-height: 1.25;
+    }
+    .bottom-rail .center {
+      font-family: var(--editorial);
+      font-style: italic;
+      font-size: 16px;
+      color: rgba(10,14,15,0.92);
+      text-align: center;
+      max-width: 460px;
+      line-height: 1.4;
+    }
+    .bottom-rail .center strong {
+      font-family: var(--display);
+      font-style: normal;
+      font-weight: 500;
+      color: var(--ink);
+    }
+    .bottom-rail .right {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: rgba(10,14,15,0.88);
+      text-align: right;
+    }
+    .bottom-rail .right .star { color: var(--gold); }
+    .bottom-rail .right strong {
+      font-family: var(--display);
+      font-style: italic;
+      font-weight: 500;
+      color: var(--ink);
+      font-size: 13px;
+      letter-spacing: -0.005em;
+      text-transform: none;
+    }
+
+    .hero, .info, .proof-strip, .bottom-rail { animation: rise 1s cubic-bezier(.22,.61,.36,1) both; }
+    .info { animation-delay: 0.1s; }
+    .proof-strip { animation-delay: 0.2s; }
+    .bottom-rail { animation-delay: 0.3s; }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 980px) {
+      .page { padding: 20px 18px; gap: 18px; }
+      .hero { grid-template-columns: 1fr; gap: 24px; padding: 6px 0; }
+      .h-left { gap: 18px; }
+      .headline { font-size: clamp(36px, 10vw, 60px); }
+      .h-right { padding: 22px 22px 24px; }
+      .h-right .stat-block .big-stat { font-size: 56px; }
+      .info { grid-template-columns: 1fr; gap: 22px; padding-top: 18px; }
+      .col { padding: 22px 0 0; border-left: none; border-top: 1px solid var(--rule); }
+      .col:first-child { padding-top: 0; border-top: none; }
+      .proof-strip { grid-template-columns: 1fr 1fr; gap: 18px 0; }
+      .proof-cell:nth-child(odd) { border-left: none; padding-left: 0; }
+      .bottom-rail { grid-template-columns: 1fr; gap: 16px; text-align: center; padding-top: 14px; }
+      .bottom-rail .left, .bottom-rail .right { text-align: center; }
+      .bottom-rail .center { max-width: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page">
+
+    <!-- TOP RAIL -->
+    <div class="top-rail">
+      <div class="brand">
+        <img src="https://saganrecruitment.com/wp-content/uploads/2025/10/Sagan-Logo-2-e1759568299542.png" alt="Sagan" />
+        <div class="sep"></div>
+        <span class="product">Partner Referral<em>.</em></span>
+      </div>
+      <div class="top-meta">
+        <span class="pulse"></span>
+        <span class="pre">Refer a business.</span>
+        <span class="accent">Earn revenue share.</span>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="h-left">
+        <h1 class="headline">
+          Your network is <em>worth</em><br>
+          <span class="heavy">more</span> than a handshake.<br>
+          We <span class="ul">pay for it.</span>
+        </h1>
+        <p class="lede">Sagan helps companies hire <strong>world-class global talent</strong> with <strong>70 to 80% comp savings</strong> versus US hires. Most searches close in under three weeks. Introduce a business that's hiring, earn revenue share on every customer that signs.</p>
+      </div>
+
+      <div class="h-right">
+        <div class="label">Top of the partner stack</div>
+        <div class="stat-block">
+          <div class="big-stat">
+            10<span class="or">%</span>
+          </div>
+          <span class="per">of initial revenue when your referral joins the Sagan membership community.</span>
+        </div>
+        <div class="stat-row">
+          <div class="item">
+            <span class="k">White Glove</span>
+            <span class="v"><em>$</em>1,000 <em>or</em> 25%</span>
+          </div>
+          <div class="item">
+            <span class="k">Referral cap</span>
+            <span class="v">None</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INFO GRID -->
+    <div class="info">
+
+      <!-- COL 1: WHAT YOU EARN -->
+      <div class="col">
+        <div class="col-label">What you earn</div>
+        <div class="offer-tiers">
+          <div class="tier">
+            <div class="tier-name">Membership Referral</div>
+            <div class="tier-pay">10<em>%</em></div>
+            <div class="tier-detail">Of the initial revenue when your referral joins the Sagan membership community. Recurring base rate, every new member you bring in.</div>
+          </div>
+          <div class="tier">
+            <div class="tier-name">White Glove Placement</div>
+            <div class="tier-pay">$1,000 <em>or</em> 25<em>%</em></div>
+            <div class="tier-detail">Whichever is greater, on recruitment revenue above standard par value, for one-time White Glove senior placements.</div>
+          </div>
+          <div class="tier">
+            <div class="tier-name">Paid in 3 installments</div>
+            <div class="tier-pay" style="font-size: 18px; line-height: 1.3;">Day 30 &middot; Day 60 &middot; Day 90</div>
+            <div class="tier-detail">Each payment comes with a transparent breakdown report. 180-day window from referral to signed agreement.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COL 2: THE MATH -->
+      <div class="col">
+        <div class="col-label">The math, on real referrals</div>
+        <table class="math-table">
+          <thead>
+            <tr>
+              <th>Scenario</th>
+              <th class="right">You earn</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="scenario">One senior White Glove placement <span style="color:var(--gold);font-style:italic;">($30K year-one comp)</span></td>
+              <td class="amount"><em>$</em>2,250</td>
+            </tr>
+            <tr>
+              <td class="scenario">One Sagan membership signup <span style="color:var(--gold);font-style:italic;">($30K first-year)</span></td>
+              <td class="amount"><em>$</em>3,000</td>
+            </tr>
+            <tr>
+              <td class="scenario">5 referrals per year <span style="color:var(--gold);font-style:italic;">(3 White Glove + 2 membership)</span></td>
+              <td class="amount">~<em>$</em>22,000</td>
+            </tr>
+            <tr class="highlight">
+              <td class="scenario">10 White Glove + 5 membership in 12 months</td>
+              <td class="amount">~<em>$</em>50,000</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="math-foot">If your customer base is <strong>founder-led businesses</strong> hiring globally, the right 8 to 10 referrals a year can comfortably clear <strong>$50K to $100K</strong> in recurring revenue share to you.</p>
+      </div>
+
+      <!-- COL 3: HOW IT WORKS -->
+      <div class="col">
+        <div class="col-label">How it works</div>
+        <div class="steps-list">
+          <div class="step">
+            <div class="step-num">01</div>
+            <div class="step-content">
+              <div class="step-title"><em>Refer</em></div>
+              <div class="step-desc">Send us the contact details of a business that's hiring. Email, referral form, or a quick message.</div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">02</div>
+            <div class="step-content">
+              <div class="step-title">Sagan <em>engages</em></div>
+              <div class="step-desc">We reach out and, if it's a fit, accept them as an eligible lead. No cost or risk to you.</div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">03</div>
+            <div class="step-content">
+              <div class="step-title">They <em>sign</em></div>
+              <div class="step-desc">If they become a Sagan customer within 180 days of your referral, the deal qualifies for your share.</div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">04</div>
+            <div class="step-content">
+              <div class="step-title">You <em>earn</em></div>
+              <div class="step-desc">Your share is paid in three equal installments at 30, 60, and 90 days. Each with a clean report.</div>
+            </div>
+          </div>
+        </div>
+        <p class="steps-foot">Every referral must be <strong>new to Sagan</strong> with the owner's consent. No cap, no exclusivity, no quotas.</p>
+      </div>
+
+    </div>
+
+    <!-- PROOF STRIP -->
+    <div class="proof-strip">
+      <div class="proof-cell">
+        <div class="proof-num">70<em>—</em>80<em>%</em></div>
+        <div class="proof-label">Comp savings<br>vs. US hires</div>
+      </div>
+      <div class="proof-cell">
+        <div class="proof-num">31</div>
+        <div class="proof-label">Countries<br>sourced</div>
+      </div>
+      <div class="proof-cell">
+        <div class="proof-num">300<em>+</em></div>
+        <div class="proof-label">Enterprise<br>members</div>
+      </div>
+      <div class="proof-cell">
+        <div class="proof-num">2,000<em>+</em></div>
+        <div class="proof-label">Roles<br>placed</div>
+      </div>
+    </div>
+
+    <!-- BOTTOM RAIL -->
+    <div class="bottom-rail">
+      <div class="left">
+        Ideal referrals
+        <span class="accent">Home Services &middot; Franchises &middot; PE &amp; Holdings &middot; Pro Services &middot; Real Estate &middot; Health &middot; High Growth Tech</span>
+      </div>
+      <div class="center">
+        "We're not in the recruiting business. We're in the <strong>leverage business.</strong>"
+        <br>
+        <span style="font-family: var(--mono); font-size: 10px; letter-spacing: 1.4px; text-transform: uppercase; color: rgba(10,14,15,0.65);">— Sagan Passport positioning</span>
+      </div>
+      <div class="right">
+        <span class="star">★</span> SAGAN &middot; PARTNER REFERRAL<br>
+        <strong>saganpassport.com</strong>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
